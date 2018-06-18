@@ -7,7 +7,7 @@ ENV GID=991 UID=991 \
 RUN apk -U upgrade && apk add git \
  && git clone -b v2-develop --depth=1 https://github.com/causefx/Organizr \
  && mv Organizr organizr \
- && cp /organizr/api/config/defaults.php /organizr/api/ \
+ && cp /organizr/api/config/default.php /organizr/api/ \
  && apk del git && rm -f /var/cache/apk/*
 
 COPY rootfs /
